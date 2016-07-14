@@ -5,13 +5,24 @@
  * @author     Michael KÃ¶lling and David J. Barnes
  * @version    0.1 (2011.07.31)
  */
+import java.util.Random;
+import java.util.ArrayList;
 public class Responder
 {
+    private Random aleatorio;
+    private ArrayList<String> cadena;
     /**
      * Construct a Responder - nothing to do
      */
     public Responder()
     {
+        aleatorio = new Random();
+        cadena = new ArrayList<>();
+        cadena.add("1 Prueba a reiniciar el equipo.");
+        cadena.add("2 Tienes que conectar el wifi");
+        cadena.add("3 Esta averia está cubierta por la garantia.");
+        cadena.add("4 Itroduce el siguiente codigo: 666");
+        cadena.add("5 Navegar con Internet Explorer provoca pantallazos azules.");
     }
 
     /**
@@ -20,6 +31,27 @@ public class Responder
      */
     public String generateResponse()
     {
-        return "That sounds interesting. Tell me more...";
+        int numSol = cadena.size();
+        return cadena.get(aleatorio.nextInt(numSol));
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
