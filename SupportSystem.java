@@ -33,12 +33,12 @@ public class SupportSystem
     public void start()
     {
         boolean finished = false;
-
+        
         printWelcome();
-
+        
         while(!finished) {
-            String input = reader.getInput();
-
+            String input = reader.getInput();//almaceno la repuesta del usuario en la VL.
+            input = input.trim();//aplico el mt trim() a la VL para eliminar los posibles espacios en blanco.(atrás y delante)
             if(input.startsWith("bye")) {
                 finished = true;
             }
