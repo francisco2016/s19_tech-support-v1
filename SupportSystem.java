@@ -39,7 +39,7 @@ public class SupportSystem
         while(!finished) {
             String input = reader.getInput();//almaceno la repuesta del usuario en la VL.
 
-            if(input.trim().toLowerCase().startsWith("bye")) {
+            if(input.trim().toLowerCase().equals("bye")) {
                 finished = true;
             }
             else {
