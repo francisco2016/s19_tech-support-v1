@@ -42,6 +42,11 @@ public class SupportSystem
             if(input.trim().toLowerCase().equals("bye")) {
                 finished = true;
             }
+            else if(input.equals("Iconos") || input.equals("Red") || input.equals("Precio") || 
+                                    input.equals("Contraseña") || input.equals("Azul")){
+                  String response = responder.respuestaClave(input);
+                System.out.println(response);
+            }
             else {
                 String response = responder.generateResponse();
                 System.out.println(response);
